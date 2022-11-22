@@ -1,6 +1,7 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+/* eslint-disable */
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const url = "https://api.spacexdata.com/v3/rockets";
+const url = 'https://api.spacexdata.com/v3/rockets';
 
 const getRocket = async () => {
   const res = await fetch(url);
@@ -8,12 +9,12 @@ const getRocket = async () => {
   return rockets;
 };
 
-export const fetchRockets = createAsyncThunk("rockets/fetchRockets", getRocket);
+export const fetchRockets = createAsyncThunk('rockets/fetchRockets', getRocket);
 const rocketSlice = createSlice({
-  name: "rockets",
+  name: 'rockets',
   initialState: {
     rockets: [],
-    status: "Rocket_display",
+    status: 'Rocket_display',
     error: null,
   },
   reducers: {
@@ -25,23 +26,21 @@ const rocketSlice = createSlice({
       state.rockets = newState;
     },
   },
-  
+
   extraReducers(builder) {
     builder.addCase(fetchRockets.pending, (state) => {
-      state.status = "loading";
+      state.status = 'loading';
     });
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
-      state.status = "succeeded";
+      state.status = 'succeeded';
       const realRocket = [];
-      action.payload.map((rocket) =>
-        realRocket.push({
-          id: rocket.id,
-          name: rocket.rocket_name,
-          description: rocket.description,
-          image: rocket.flickr_images[1],
-          reserved: false,
-        })
-      );
+      action.payload.map((rocket) => realRocket.push({
+        id: rocket.id,
+        name: rocket.rocket_name,
+        description: rocket.description,
+        image: rocket.flickr_images[1],
+        reserved: false,
+      }));
       state.rockets = realRocket;
     });
   },

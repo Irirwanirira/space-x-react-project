@@ -5,8 +5,6 @@ import MyProfile from './component/MyProfile';
 import Nav from './component/Nav';
 import Rockets from './component/rockets';
 
-Rockets
-
 function App() {
   return (
     <Router>
