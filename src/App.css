@@ -1,39 +1,100 @@
-.App {
-  text-align: center;
+* {
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav_bar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid grey;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.logo_head {
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.rocket,
+.mission,
+.profile {
+  color: #0290ff;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.rocket:hover {
+  text-decoration: underline;
+}
+
+.mission:hover {
+  text-decoration: underline;
+}
+
+.profile:hover {
+  text-decoration: underline;
+}
+
+.rocket_details {
+  display: flex;
+}
+
+.rocket_image {
+  width: 40%;
+  height: auto;
+}
+
+.rocket_name {
+  font-size: 20px;
+}
+
+.rocket_description {
+  font-size: 18px;
+}
+
+.rocket_description span {
+  background-color: blue;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.ReserveBtn {
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.reserve_btn {
+  background-color: #0290ff;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.cancel_reserve {
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+
+
+.profile_d {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.t_head {
+  font-size: 40px;
+}
+
+.t_body {
+  margin: 20px;
+  font-size: 25px;
+  border: 10px solid red; 
 }
