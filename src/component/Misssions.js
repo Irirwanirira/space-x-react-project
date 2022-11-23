@@ -5,7 +5,6 @@ import { fetchMission, spacejet } from '../Redux/Mission/missionSlice';
 const Missions = () => {
   const dispatch = useDispatch();
   const { missions, loading } = useSelector((state) => state.missions);
-
   useEffect(() => {
     dispatch(fetchMission());
   },[loading, dispatch] );
