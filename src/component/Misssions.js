@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMission } from '../Redux/Mission/missionSlice';
+import { fetchMission, spacejet } from '../Redux/Mission/missionSlice';
 /* eslint-disable */
 const Missions = () => {
   const dispatch = useDispatch();
@@ -8,23 +8,26 @@ const Missions = () => {
 
   useEffect(() => {
     dispatch(fetchMission());
-  } );
+  },[loading, dispatch] );
 
   if (loading) {
     return <h1> Loading...</h1>;
   }
 
+  const jetclick = (id) => {
+    dispatch(spacejet(id))
+  }
   return (
     <div className="d-mission">
-      {missions.map((item) => (
-        <div key={item.id}>
-          <h1>{item.mission_name}</h1>
-          <p>{item.description}</p>
+      {missions.map(({id, name, description, mission}) => (
+        <div key={id}>
+          <h1>{name}</h1>
+          <p>{description}</p>
           <button type="button">
-            NOT A MEMBER
+          {mission ? "Active Member" : "Not A Member"}
           </button>
-          <button type="button">
-            JOIN MISSION
+          <button onClick={() => {jetclick(id);}}  type="button">
+            {mission ? "cancel missions" : "Join Mision"}
           </button>
         </div>
       ))}
