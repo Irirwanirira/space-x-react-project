@@ -1,5 +1,5 @@
 import React from "react";
-import MissionProfile from "./missionDisplay";
+import MissionProfile from "./missionProfile";
 import UpdateRocket from "./RocketProfile";
 
 
