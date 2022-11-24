@@ -66,12 +66,15 @@
 }
 
 .rocket_description span {
-  background-color: blue;
+  background-color: #0a5d9c;
   border-radius: 5px;
   padding: 5px;
 }
 
 .ReserveBtn {
+  cursor: pointer;
+  border: transparent;
+  filter: brightness(150%);
   padding: 5px;
   font-size: 20px;
   border-radius: 10px;
@@ -82,13 +85,19 @@
   padding: 5px;
   font-size: 20px;
   border-radius: 10px;
+  color: #fff;
+  width: fit-content;
 }
 
 .cancel_reserve {
   padding: 5px;
   font-size: 20px;
   border-radius: 10px;
+  background-color: rgb(163, 161, 161);
+  color: #02030f;
+  border: 1px solid #050508;
 }
+
 .mission_table {
   margin-top: 50px;
   background-color: rgb(200, 196, 196);
@@ -102,12 +111,12 @@
   background-color: #fff;
 }
 
-#mission_tr_h td {
-  font-weight: 900;
-}
-
 .mission_tr td {
   padding: 10px;
+}
+
+#mission_tr_h td {
+  font-weight: 900;
 }
 
 .join_btn {

@@ -24,8 +24,8 @@ const RocketsDisplay = (props) => {
           {description}
         </p>
         <button type="button" onClick={ReserveBtn} className="ReserveBtn">
-          {reserved && <span className='cancel_reserve'>Cancel Reservation</span>}
-          {!reserved && <span  className="reserve_btn"> Reserve</span>}
+          {reserved && <span className='cancel_reserve' >Cancel Reservation</span>}
+          {!reserved && <span  className="reserve_btn" style={{appearance:"ghost"}} > Reserve</span>}
         </button>
       </div>
     </div>
