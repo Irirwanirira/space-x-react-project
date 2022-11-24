@@ -1,17 +1,20 @@
-import React from "react";
+/* eslint-disable */
 import { useSelector } from "react-redux";
+const Missionprofile = () => {
+    const {missions} = useSelector ((state) => state.missions)
+    const missionReserved = missions.filter((space1) => space1.mission)
+return(
+    <section>
+        <h1>My Missions</h1>
+        <ul>
+        {missionReserved.map(({id, name}) => (
+            <li key={id}>{name}</li>
+        ))}
+       
+        </ul>
+    </section>
+)
 
-const MissionProfile = () => {
-    const { missions} = useSelector((state) => state.missions);
-    const MissionStatus = missions.filter((item) => item.mission === true);
-    return ( 
-        <table>
-            <thead className="t_head"> My mission</thead>
-            <tbody className="t_body">
-                {MissionStatus.map((item) => <tr key={item.id}>{item.name}</tr>)}
-            </tbody>
-        </table>
-     );
-};
+}
 
-export default MissionProfile;
+export default Missionprofile;

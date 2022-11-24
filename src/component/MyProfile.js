@@ -1,14 +1,16 @@
+/* eslint-disable */
 import React from "react";
-import MissionProfile from "./missionProfile";
 import UpdateRocket from "./RocketProfile";
+import Missionprofile from "./missionProfile";
 
 
 const MyProfile = () => {
 
   return(
     <div className="profile_d">
+
+      <Missionprofile />
       <UpdateRocket />
-      <MissionProfile />
     </div>
   )
   
