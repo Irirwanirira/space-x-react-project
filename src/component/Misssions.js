@@ -29,7 +29,7 @@ const Missions = () => {
           <td>{name}</td>
           <td>{description}</td>
           <td>
-            <button type="button" >
+            <button type="button" className='not_member'>
               {mission ? "Active Member" : "NOT A MEMBER"}
             </button>
           </td>
