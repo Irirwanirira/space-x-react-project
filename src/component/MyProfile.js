@@ -7,11 +7,10 @@ import Missionprofile from "./missionProfile";
 const MyProfile = () => {
 
   return(
-    <div className="profile_d">
-
+    <table className="profile_d">
       <Missionprofile />
       <UpdateRocket />
-    </div>
+    </table>
   )
   
 };

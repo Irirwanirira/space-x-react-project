@@ -6,16 +6,20 @@ const UpdateRocket = () => {
   const rockets = useSelector((state) => state.rocketReducer.rockets);
   const reservedRockets = rockets.filter((item) => item.reserved === true);
   return (
-    <table >
-      <theader className="t_head">
+    <div>
+      <h1 className="t_head">
         My Rockets 
-      </theader>
-      <tbody className="t_body">
+      </h1>
+      <table className="table">
+        <tbody className="t_body">
         {reservedRockets.map((item) => (
-          <tr key={item.id}>{item.name}</tr>
+          <tr className="t_tr_d" key={item.id}>{item.name}</tr>
         ))}
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div>
+    
+    
   );
 };
 export default UpdateRocket;
