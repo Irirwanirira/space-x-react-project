@@ -12,7 +12,6 @@ const MyProfile = () => {
       <UpdateRocket />
     </table>
   )
-  
 };
 
 export default MyProfile;

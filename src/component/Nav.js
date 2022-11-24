@@ -5,7 +5,7 @@ const Nav = () => (
   <header>
     <nav className='nav_bar'>
       <div className="logo_head">
-        <img src="/images/rocket.jpg" alt="logo" className='logo' />
+        <img src="/images/rocket.jpeg" alt="logo" className='logo' />
         <p>Space Travelers' Hub</p>
       </div>
       <div className="navigation">
