@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchMission, spacejet } from "../Redux/Mission/missionSlice";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchMission, spacejet } from '../Redux/Mission/missionSlice';
 /* eslint-disable */
 const Missions = () => {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const Missions = () => {
           <td>{name}</td>
           <td>{description}</td>
           <td>
-            <button type="button" >
+            <button type="button" className='not_member'>
               {mission ? "Active Member" : "NOT A MEMBER"}
             </button>
           </td>
