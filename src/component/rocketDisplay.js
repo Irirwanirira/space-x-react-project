@@ -18,14 +18,14 @@ const RocketsDisplay = (props) => {
       <img src={image} alt={image} className="rocket_image" />
       <div>
         <h1 className="rocket_name">{name}</h1>
-        <p className="recket_description">
-          {reserved && <sapan> Reseved</sapan>}
+        <p className="rocket_description">
+          {reserved && <span> Reseved</span>}
           {' '}
           {description}
         </p>
-        <button type="button" onClick={ReserveBtn}>
-          {reserved && <span>Cancel Reservation</span>}
-          {!reserved && <span> Reserve</span>}
+        <button type="button" onClick={ReserveBtn} className="ReserveBtn">
+          {reserved && <span className='cancel_reserve' >Cancel Reservation</span>}
+          {!reserved && <span  className="reserve_btn" style={{appearance:"ghost"}} > Reserve</span>}
         </button>
       </div>
     </div>

@@ -30,9 +30,8 @@ const newState = myState.missions.map((jet1) => {
   }
 })
 myState.missions = newState
-console.log(myState)
-    }
-  },
+}
+},
 
   extraReducers: {
     [fetchMission.pending]: (state) => {
