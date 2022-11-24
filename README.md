@@ -48,6 +48,10 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@Iri_joseph](https://twitter.com/Irirwanirira)
 - LinkedIn: [Joseph IRIRWANIRIRA](https://linkedin.com/in/joseph-irirwanirira-74666623a/)
 
+- GitHub: @jaamanu
+- Twitter: @JamesAsibeyManu
+- LinkedIn: @jamesasibeymanu
+
 
 ## 🤝 Contributing
 
