@@ -4,48 +4,70 @@
   box-sizing: border-box;
 }
 
-.nav_bar {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fcfcfc;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-decoration: none;
-  border-bottom: 1px solid grey;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
 }
 
-.logo_head {
-  display: flex;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  align-items: center;
-}
-
-.logo_head p {
-  font-size: 30px;
+.navbar {
+  height: 100px;
+  position: relative;
+  border-bottom: 2px solid grey;
 }
 
 .logo {
-  width: 100px;
+  display: flex;
+  align-items: center;
+  height: 70px;
 }
 
-.rocket,
-.mission,
-.profile {
+.logo img {
+  height: 100%;
+}
+
+.logo p {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2f234f;
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 60px;
+}
+
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
   color: #0290ff;
-  font-size: 20px;
   text-decoration: none;
-  cursor: pointer;
 }
 
-.rocket:hover {
-  text-decoration: underline;
+.nav-elements ul a.active {
+  color: #0290ff;
+  font-weight: 500;
+  position: relative;
 }
 
-.mission:hover {
-  text-decoration: underline;
-}
-
-.profile:hover {
-  text-decoration: underline;
+.menu-icon {
+  display: none;
 }
 
 .rocket_details {
@@ -178,4 +200,121 @@
 
 .active {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .App {
+    margin: 0;
+  }
+
+  .navbar a {
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #0290ff;
+    width: 0;
+    height: 30vh;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    z-index: 11;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+    color: #fff;
+  }
+
+  .nav-elements ul a.active {
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+
+  .nav-elements ul a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 70px;
+  }
+
+  .logo img {
+    height: 60%;
+  }
+
+  .logo p {
+    font-size: 10px;
+    color: #2f234f;
+  }
+
+  .rocket_details {
+    flex-direction: column;
+  }
+
+  .rocket_image {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile_d {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .mission_container {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .rockets_container {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .t_head {
+    width: 100%;
+    margin: 0;
+  }
+
+  .table {
+    width: 80%;
+    margin: 0;
+  }
 }

@@ -4,7 +4,7 @@ const Missionprofile = () => {
   const { missions } = useSelector((state) => state.missions);
   const missionReserved = missions.filter((space1) => space1.mission);
   return (
-    <div>
+    <div className="mission_container">
       <h1 className="t_head">My Missions</h1>
       <table className="table">
         <tbody className="t_body">
