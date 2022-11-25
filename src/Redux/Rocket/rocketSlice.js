@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const url = 'https://api.spacexdata.com/v3/rockets';
@@ -23,16 +22,19 @@ const rocketSlice = createSlice({
         if (rocket.id !== action.payload) return rocket;
         return { ...rocket, reserved: !rocket.reserved };
       });
-      state.rockets = newState;
+      const rocketReserve = state;
+      rocketReserve.rockets = newState;
     },
   },
 
   extraReducers(builder) {
     builder.addCase(fetchRockets.pending, (state) => {
-      state.status = 'loading';
+      const isPending = state;
+      isPending.status = 'loading';
     });
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
-      state.status = 'succeeded';
+      const isFullfilled = state;
+      isFullfilled.status = 'succeeded';
       const realRocket = [];
       action.payload.map((rocket) => realRocket.push({
         id: rocket.id,
@@ -41,7 +43,7 @@ const rocketSlice = createSlice({
         image: rocket.flickr_images[1],
         reserved: false,
       }));
-      state.rockets = realRocket;
+      isFullfilled.rockets = realRocket;
     });
   },
 });

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const url = 'https://api.spacexdata.com/v3/missions';
@@ -35,7 +34,8 @@ const MissionSlice = createSlice({
 
   extraReducers: {
     [fetchMission.pending]: (state) => {
-      state.pending = true;
+      const isPending = state;
+      isPending.pending = true;
     },
     [fetchMission.fulfilled]: (state, action) => {
       const joinMission = state;
@@ -50,7 +50,8 @@ const MissionSlice = createSlice({
       joinMission.missions = missionData;
     },
     [fetchMission.rejected]: (state) => {
-      state.loading = false;
+      const isRejected = state;
+      isRejected.loading = false;
     },
   },
 });
