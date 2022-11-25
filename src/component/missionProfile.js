@@ -6,10 +6,10 @@ const Missionprofile = () => {
 return(
     <div>
         <h1 className="t_head">My Missions</h1>
-        <table  >
-            <tbody >
+        <table className="table" >
+            <tbody className="t_body">
             {missionReserved.map(({id, name}) => (
-            <tr key={id}>{name}</tr>
+            <tr className="t_tr_d" key={id}>{name}</tr>
         ))}
          </tbody>
         </table>
