@@ -2,7 +2,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { rocketsReserve } from '../Redux/Rocket/rocketSlice';
-
 const RocketsDisplay = (props) => {
   const { rocketDetails } = (props);
   const {
@@ -24,8 +23,8 @@ const RocketsDisplay = (props) => {
           {description}
         </p>
         <button type="button" onClick={ReserveBtn} className="ReserveBtn">
-          {reserved && <span className='cancel_reserve' >Cancel Reservation</span>}
-          {!reserved && <span  className="reserve_btn" style={{appearance:"ghost"}} > Reserve</span>}
+          {reserved && <span className="cancel_reserve">Cancel Reservation</span>}
+          {!reserved && <span className="reserve_btn" style={{ appearance: 'ghost' }}> Reserve</span>}
         </button>
       </div>
     </div>
