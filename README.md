@@ -63,7 +63,7 @@ This is a react project that renders rocket data as well as mission data from an
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://deploy-preview-32--strong-heliotrope-adde83.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
