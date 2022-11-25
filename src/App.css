@@ -134,15 +134,6 @@
   cursor: pointer;
 }
 
-.join_btn:focus {
-  padding: 0.5rem;
-  text-align: center;
-  border-radius: 4px;
-  border: 2px solid red;
-  background-color: #fff;
-  color: red;
-}
-
 .not_member {
   background-color: rgb(123, 122, 122);
   color: #fff;
@@ -150,14 +141,6 @@
   border-radius: 4px;
   border: transparent;
   cursor: pointer;
-}
-
-.not_member:focus {
-  background-color: #0290ff;
-  color: #fff;
-  padding: 0.2rem;
-  border-radius: 4px;
-  border: transparent;
 }
 
 .table {
@@ -181,4 +164,18 @@
 .t_tr_d {
   padding: 20px;
   margin: 20px;
+}
+
+.red {
+  border: 1px solid red;
+  color: red;
+}
+
+.blue {
+  color: #fff;
+  background-color: aqua;
+}
+
+.active {
+  text-decoration: underline;
 }

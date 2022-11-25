@@ -1,7 +1,8 @@
-/* eslint-disable */
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { rocketsReserve } from '../Redux/Rocket/rocketSlice';
+
 const RocketsDisplay = (props) => {
   const { rocketDetails } = (props);
   const {
@@ -29,5 +30,8 @@ const RocketsDisplay = (props) => {
       </div>
     </div>
   );
+};
+RocketsDisplay.propTypes = {
+  rocketDetails: PropTypes.string.isRequired,
 };
 export default RocketsDisplay;

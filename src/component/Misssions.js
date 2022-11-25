@@ -4,12 +4,14 @@ import { fetchMission, spacejet } from '../Redux/Mission/missionSlice';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  const { missions, loading } = useSelector((state) => state.missions);
+  const { missions, status } = useSelector((state) => state.missions);
   useEffect(() => {
-    dispatch(fetchMission());
-  }, [loading, dispatch]);
+    if (status === null) {
+      dispatch(fetchMission());
+    }
+  }, [status, dispatch]);
 
-  if (loading) {
+  if (status === 'pending') {
     return <h1> Loading...</h1>;
   }
 
@@ -31,20 +33,38 @@ const Missions = () => {
           <td>{name}</td>
           <td>{description}</td>
           <td>
-            <button type="button" className="not_member">
-              {mission ? 'Active Member' : 'NOT A MEMBER'}
-            </button>
+
+            {mission
+              ? <button type="button" className="not_member blue">Active Member</button>
+              : <button type="button" className="not_member">Not a Member</button>}
+
           </td>
           <td>
-            <button
-              onClick={() => {
-                jetclick(id);
-              }}
-              type="button"
-              className="join_btn"
-            >
-              {mission ? 'Leave Mission' : 'Join Mision'}
-            </button>
+
+            {mission
+              ? (
+                <button
+                  onClick={() => {
+                    jetclick(id);
+                  }}
+                  type="button"
+                  className="join_btn red"
+                >
+                  Leave Mission
+                </button>
+              )
+              : (
+                <button
+                  onClick={() => {
+                    jetclick(id);
+                  }}
+                  type="button"
+                  className="join_btn"
+                >
+                  Join Mission
+                </button>
+              )}
+
           </td>
         </tr>
       ))}

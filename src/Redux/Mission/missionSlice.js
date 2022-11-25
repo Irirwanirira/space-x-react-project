@@ -14,8 +14,7 @@ const MissionSlice = createSlice({
   name: 'missions',
   initialState: {
     missions: [],
-    status: 'mission_display',
-    loading: false,
+    status: null,
   },
   reducers: {
     spacejet: (state, action) => {
@@ -35,11 +34,11 @@ const MissionSlice = createSlice({
   extraReducers: {
     [fetchMission.pending]: (state) => {
       const isPending = state;
-      isPending.pending = true;
+      isPending.status = 'pending';
     },
     [fetchMission.fulfilled]: (state, action) => {
       const joinMission = state;
-      joinMission.loading = false;
+      joinMission.status = 'fulfilled';
       const missionData = [];
       action.payload.map((mission) => missionData.push({
         id: mission.mission_id,
@@ -51,7 +50,7 @@ const MissionSlice = createSlice({
     },
     [fetchMission.rejected]: (state) => {
       const isRejected = state;
-      isRejected.loading = false;
+      isRejected.status = 'rejected';
     },
   },
 });
