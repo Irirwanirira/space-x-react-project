@@ -55,9 +55,10 @@ body {
 
 .nav-elements ul a {
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 400;
   color: #0290ff;
   text-decoration: none;
+  font-weight: 800;
 }
 
 .nav-elements ul a.active {
@@ -87,7 +88,7 @@ body {
   font-size: 18px;
 }
 
-.rocket_descriptionpx stylelint "**/*.{css,scss}"n span {
+.rocket_description span {
   background-color: #0a5d9c;
   border-radius: 5px;
   padding: 5px;
