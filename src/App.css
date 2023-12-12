@@ -22,7 +22,7 @@ body {
 }
 
 .navbar {
-  height: 100px;
+  height: 120px;
   position: relative;
   border-bottom: 2px solid grey;
 }
@@ -58,6 +58,7 @@ body {
   font-weight: 400;
   color: #0290ff;
   text-decoration: none;
+  font-weight: 800;
 }
 
 .nav-elements ul a.active {
@@ -216,10 +217,6 @@ body {
     box-sizing: border-box;
   }
 
-  .App {
-    margin: 0;
-  }
-
   .navbar a {
     text-decoration: none;
   }
@@ -231,10 +228,10 @@ body {
 
   .nav-elements {
     position: absolute;
-    right: 0;
+    right: -20px;
     top: 60px;
-    background-color: #0290ff;
-    width: 0;
+    background-color: grey;
+    width: 50%;
     height: 30vh;
     transition: all 0.3s ease-in;
     overflow: hidden;
@@ -298,12 +295,12 @@ body {
     margin: 0;
   }
 
-  .mission_container {
+  .missionContainer {
     width: 90vw;
     margin: auto;
   }
 
-  .rockets_container {
+  .rocketsContainer {
     width: 90vw;
     margin: auto;
   }

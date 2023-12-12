@@ -5,7 +5,7 @@ const UpdateRocket = () => {
   const rockets = useSelector((state) => state.rocketReducer.rockets);
   const reservedRockets = rockets.filter((item) => item.reserved === true);
   return (
-    <div className="rockets_container">
+    <div className="rocketsContainer">
       <h1 className="t_head">
         My Rockets
       </h1>

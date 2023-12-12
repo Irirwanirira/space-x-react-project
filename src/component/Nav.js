@@ -40,7 +40,7 @@ const Nav = () => {
               <NavLink to="/"> Rocket</NavLink>
             </li>
             <li>
-              <NavLink to="/Missions"> Missions</NavLink>
+              <NavLink to="/Missions"> Missions |</NavLink>
             </li>
             <li>
               <NavLink to="/MyProfile">My Profile</NavLink>
